@@ -22,16 +22,18 @@ const contactsSlice = createSlice({
         state.error = payload;
       })
       .addCase(deleteContact.pending, state => {
-        state.isLoading = true;
+        state.isLoading = false;
       })
       .addCase(deleteContact.fulfilled, (state, { payload }) => {
         state.items = state.items.filter(contact => contact.id !== payload);
+        state.isLoading = false;
       })
       .addCase(deleteContact.rejected, (state, { payload }) => {
         state.error = payload;
+        state.isLoading = false;
       })
       .addCase(addContact.pending, state => {
-        state.isLoading = true;
+        state.isLoading = false;
       })
       .addCase(addContact.fulfilled, (state, { payload }) => {
         state.isLoading = false;

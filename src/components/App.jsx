@@ -3,11 +3,11 @@ import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/contactOperation';
+import { fetchContacts } from 'redux/contacts/contactOperation';
 import { Layout } from './Layout/Layout';
 import { Header } from './Header/Header';
 import { useSelector } from 'react-redux';
-import { selectError, selectIsLoading } from 'redux/contactsSelector';
+import { selectError, selectIsLoading } from 'redux/contacts/contactsSelector';
 
 export const App = () => {
   const dispatch = useDispatch();

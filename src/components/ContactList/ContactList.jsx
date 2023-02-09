@@ -20,7 +20,7 @@ export const ContactList = () => {
 
   return (
     <ul className={css.list}>
-      {filterContacts &&
+      {filterContacts.length !== 0 &&
         filterContacts.map(contact => {
           return (
             <li className={css.item} key={contact.id}>
